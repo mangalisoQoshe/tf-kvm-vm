@@ -9,10 +9,10 @@ A Terraform module for provisioning KVM virtual machines on a local hypervisor u
 
 ```terraform
 module "tf_vm" {
-  source = "../tf-kvm-vm"
+  source = "git@github.com:mangalisoQoshe/tf-kvm-vm.git"
 
   base_image_name = "ubuntu-cloud.qcow2"
-  base_image_path = "${path.module}/../ubuntu-cloud.qcow2"
+  base_image_path = "ubuntu-cloud.qcow2"
   vm_name         = "ubuntu-vm"
   vm_disk_name    = "ubuntu-cloud-vol.qcow2"
 }
