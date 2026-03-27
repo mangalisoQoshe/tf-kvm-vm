@@ -12,7 +12,7 @@ resource "libvirt_volume" "base_image" {
 
   create = {
     content = {
-      url = "${path.root}/../${var.base_image_path}"
+      url = "${path.root}/${var.base_image_path}"
     }
   }
 }
